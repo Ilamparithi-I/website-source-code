@@ -170,7 +170,7 @@ export default function Component() {
                         className="bg-green-500 text-black hover:bg-green-600 w-full sm:w-auto"
                     >
                         <Link
-                            to="#"
+                            to="https://github.com/Ilamparithi-I"
                             target="_blank"
                             className="flex items-center justify-center w-full"
                         >
@@ -183,7 +183,7 @@ export default function Component() {
                         className="bg-green-500 text-black hover:bg-green-600 w-full sm:w-auto"
                     >
                         <Link
-                            to="#"
+                            to="https://www.linkedin.com/in/ilamparithi-i/"
                             target="_blank"
                             className="flex items-center justify-center w-full"
                         >
@@ -196,7 +196,7 @@ export default function Component() {
                         className="bg-green-500 text-black hover:bg-green-600 w-full sm:w-auto"
                     >
                         <Link
-                            to="#"
+                            to="mailto:contact@ilam.page"
                             target="_blank"
                             className="flex items-center justify-center w-full"
                         >
