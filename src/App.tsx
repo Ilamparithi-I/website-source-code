@@ -1,14 +1,20 @@
 import React from "react";
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    useLocation,
+    useNavigate,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
 import NotFound from "./pages/NotFound";
 
-function App() {
+// This component handles the redirect logic based on the query parameter
+function RedirectHandler() {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // On initial load, check for 'redirectTo' query parameter and navigate if present
     React.useEffect(() => {
         const params = new URLSearchParams(location.search);
         const redirectTo = params.get("redirectTo");
@@ -17,14 +23,22 @@ function App() {
         }
     }, [location, navigate]);
 
+    return null; // This component doesn't render anything
+}
+
+function App() {
     return (
-        <Routes>
-            <Route path="/">
-                <Route index element={<Home />} />
-                <Route path="projects/:proj" element={<Project />} />
-                <Route path="*" element={<NotFound />} />
-            </Route>
-        </Routes>
+        <Router>
+            {/* Add the RedirectHandler to process the query parameter */}
+            <RedirectHandler />
+            <Routes>
+                <Route path="/">
+                    <Route index element={<Home />} />
+                    <Route path="projects/:proj" element={<Project />} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
+            </Routes>
+        </Router>
     );
 }
 
