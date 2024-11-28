@@ -161,10 +161,24 @@ export default function Project() {
                     )}
                 </div>
 
+                {/* Dropdown for small screens */}
+                <div className="sm:hidden mb-8">
+                    <select
+                        value={activeTab}
+                        onChange={(e) => setActiveTab(e.target.value)}
+                        className="w-full bg-black text-green-500 border border-green-500 rounded-lg py-3 px-4"
+                    >
+                        <option value="overview">Overview</option>
+                        <option value="features">Features</option>
+                        <option value="challenges">Challenges</option>
+                        <option value="future">Future</option>
+                    </select>
+                </div>
+                {/* Tabs for larger screens */}
                 <Tabs
                     value={activeTab}
                     onValueChange={setActiveTab}
-                    className="border bg-black bg-opacity-95 border-green-500 rounded-lg overflow-hidden mb-8"
+                    className="hidden sm:block border bg-black bg-opacity-95 border-green-500 rounded-lg overflow-hidden mb-8"
                 >
                     <TabsList className="w-full grid grid-cols-4 bg-transparent">
                         <TabsTrigger
@@ -192,7 +206,12 @@ export default function Project() {
                             Future
                         </TabsTrigger>
                     </TabsList>
-                    <TabsContent value="overview" className="mt-4 p-6">
+
+                    {/* Tabs Content for Larger Screens */}
+                    <TabsContent
+                        value="overview"
+                        className="p-6 bg-black bg-opacity-80 rounded-lg"
+                    >
                         <Overview
                             overview={{
                                 description: project.description,
@@ -200,15 +219,24 @@ export default function Project() {
                             }}
                         />
                     </TabsContent>
-                    <TabsContent value="features" className="mt-4 p-6">
+                    <TabsContent
+                        value="features"
+                        className="p-6 bg-black bg-opacity-80 rounded-lg"
+                    >
                         <Features features={{ features: project.features }} />
                     </TabsContent>
-                    <TabsContent value="challenges" className="mt-4 p-6">
+                    <TabsContent
+                        value="challenges"
+                        className="p-6 bg-black bg-opacity-80 rounded-lg"
+                    >
                         <Challenges
                             challenges={{ challenges: project.challenges }}
                         />
                     </TabsContent>
-                    <TabsContent value="future" className="mt-4 p-6">
+                    <TabsContent
+                        value="future"
+                        className="p-6 bg-black bg-opacity-80 rounded-lg"
+                    >
                         <Future
                             future={{
                                 futureEnhancements: project.futureEnhancements,
@@ -216,6 +244,44 @@ export default function Project() {
                         />
                     </TabsContent>
                 </Tabs>
+
+                {/* Tab Contents for Small Screens (Dropdown view) */}
+                <div className="sm:hidden">
+                    {activeTab === "overview" && (
+                        <div className="sm:block border bg-black bg-opacity-95 border-green-500 rounded-lg overflow-hidden mb-8 p-6 ">
+                            <Overview
+                                overview={{
+                                    description: project.description,
+                                    techStack: project.techStack,
+                                }}
+                            />
+                        </div>
+                    )}
+                    {activeTab === "features" && (
+                        <div className="sm:block border bg-black bg-opacity-95 border-green-500 rounded-lg overflow-hidden mb-8 p-6 ">
+                            <Features
+                                features={{ features: project.features }}
+                            />
+                        </div>
+                    )}
+                    {activeTab === "challenges" && (
+                        <div className="sm:block border bg-black bg-opacity-95 border-green-500 rounded-lg overflow-hidden mb-8 p-6 ">
+                            <Challenges
+                                challenges={{ challenges: project.challenges }}
+                            />
+                        </div>
+                    )}
+                    {activeTab === "future" && (
+                        <div className="sm:block border bg-black bg-opacity-95 border-green-500 rounded-lg overflow-hidden mb-8 p-6 ">
+                            <Future
+                                future={{
+                                    futureEnhancements:
+                                        project.futureEnhancements,
+                                }}
+                            />
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );
