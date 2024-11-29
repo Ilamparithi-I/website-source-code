@@ -76,16 +76,28 @@ export const devOpsSkills = [
 
 export const projects = [
     {
+        name: "CourseQA",
+        description:
+            "A course document based Q&A platform for students to ask questions",
+        link: "/projects/CourseQA",
+    },
+    {
         name: "BookIt",
         description:
             "A study space booking and browsing app solution for UBC students",
         link: "/projects/BookIt",
     },
     {
-        name: "CourseQA",
+        name: "Portfolio Website",
         description:
-            "A course document based Q&A platform for students to ask questions",
-        link: "/projects/CourseQA",
+            "A personal portfolio website to showcase projects and skills",
+        link: "/projects/PortfolioWebsite",
+    },
+    {
+        name: "Web Application Attack Sandbox",
+        description:
+            "A web application for students to learn about web application attacks",
+        link: "/projects/WebAppAttackSB",
     },
 ];
 

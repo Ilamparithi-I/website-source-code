@@ -94,6 +94,79 @@ export default function Projects(projectName: string) {
                 githubLink: "https://github.com/UBC-CIC/LLM-Course-QA",
                 liveLink: "",
             };
+        case "PortfolioWebsite":
+            return {
+                name: "Portfolio Website",
+                overview:
+                    "A website to showcase my projects, skills and experiences",
+                description:
+                    "This website was created to showcase my projects, skills and experiences. It was built using Vite-React-Ts, Tailwind CSS and Shadcn components. The website is responsive. It builds on each commit using GitHub Actions and is hosted on GitHub Pages.",
+                images: [
+                    "/PortfolioWebsite/home.png",
+                    "/PortfolioWebsite/phone-1.jpg",
+                    "/PortfolioWebsite/project.png",
+                    "/PortfolioWebsite/phone-2.jpg",
+                ],
+                techStack: [
+                    "React (Vite TypeScript)",
+                    "Tailwind CSS",
+                    "shadcn componenets",
+                    "GitHub Actions",
+                    "GitHub Pages",
+                ],
+                features: [
+                    "Automatic deployment on each commit",
+                    "Responsive design",
+                    "Animated Background",
+                ],
+                challenges: [
+                    "Coming up with a design that showcases my projects, skills and experiences",
+                    "Making the website responsive",
+                ],
+                futureEnhancements: [
+                    "Adding a blog section",
+                    "Adding light/dark mode",
+                ],
+                githubLink:
+                    "https://github.com/Ilamparithi-I/website-source-code",
+                liveLink: "https://ilam.page",
+            };
+        case "WebAppAttackSB":
+            return {
+                name: "Web Application Attack Sandbox Environment",
+                overview:
+                    "A sandbox environment where students can learn about XSS, SQL Injection and XSRF web application attacks ",
+                description:
+                    "This project was created as a part of CPEN 442, a CyberSecurity Course. The project is a sandbox environment where students can learn about web application attacks like XSS, SQL Injection and XSRF. The project contains a web application that is vulnerable to these attacks and a testing environment where students can test their attacks.",
+                images: [
+                    "/WebAppAttackSB/photo-1.png",
+                    "/WebAppAttackSB/photo-2.png",
+                    "/WebAppAttackSB/photo-3.png",
+                    "/WebAppAttackSB/photo-4.png",
+                    "/WebAppAttackSB/photo-5.png",
+                ],
+                techStack: ["HTML", "CSS", "JS", "ExpressJs"],
+                features: [
+                    "Multiple web application attacks",
+                    "Different Environments for each attack",
+                    "Detailed instructions",
+                    "Gamified learning experience",
+                ],
+                challenges: [
+                    "Creating a vulnerable web application",
+                    "Creating a fun and engaging learning experience",
+                    "Ensuring data privacy and security",
+                ],
+                futureEnhancements: [
+                    "Adding more web application attacks",
+                    "Adding a leaderboard",
+                    "Adding a discussion forum",
+                ],
+                githubLink:
+                    "https://github.com/CPEN442-G10/CPEN442-G10-project",
+                liveLink: "",
+            };
+
         default:
             return undefined;
     }

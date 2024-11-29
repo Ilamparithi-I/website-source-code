@@ -2,13 +2,13 @@ export default function About() {
     return (
         <div>
             <p className="text-green-400 leading-relaxed">
-                Greetings! I'm Ilamparithi Imayavaramban, a software developer
-                and cloud enthusiast with diverse experience in full-stack
-                development, cloud computing, and machine learning. My work
-                spans building dynamic web applications, automating cloud
-                infrastructure, and fine-tuning AI models, reflecting my
-                curiosity and drive to solve real-world problems with
-                technology.
+                Greetings! I'm Ilamparithi Imayavaramban, a Computer Engineering
+                Graduate from UBC and an aspiring DevOps Engineer with diverse
+                experience in full-stack development, cloud computing, and
+                machine learning. My work spans building dynamic web
+                applications, automating cloud infrastructure, working with ML
+                models and fine tuning LLMs, reflecting my curiosity and drive
+                to solve real-world problems with technology.
             </p>
             <p className="text-green-400 leading-relaxed mt-4">
                 Beyond technology, I’m passionate about serving the community. I
